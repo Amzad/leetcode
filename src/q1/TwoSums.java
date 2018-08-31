@@ -1,6 +1,6 @@
 package q1;
 
-public class Main {
+public class TwoSums {
 	
 	public static void main(String[] args) {
 		
@@ -21,16 +21,17 @@ public class Main {
 	
 	public static int[] twoSum(int[] nums, int target) {
         int length = nums.length;
+        int targets[] = new int[2];
         for (int i = 0; i < length; i++) {
         	int index = 0;
         	for (int j = i + 1; j < length; j++) {
         		if (nums[i] + nums[j] == target) { 
-        			int targets[] = {nums[i], nums[j]};
+        			targets[0] = i;
+        			targets[1] = j;
         			return targets;
         		}
         	}
         }
-		
-		return null;
+        return null;
     }
 }
